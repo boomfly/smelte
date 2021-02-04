@@ -70,14 +70,15 @@
   }
 </style>
 
+{#if !persistent && show}
+  <Scrim on:click={() => show = false} />
+{/if}
+
 {#if show}
   <aside
     class={c}
     transition:fly={transitionProps}
   >
-    {#if !persistent}
-      <Scrim on:click={() => show = false} />
-    {/if}
     <nav
       role="navigation"
       class={n}
