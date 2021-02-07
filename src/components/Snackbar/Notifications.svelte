@@ -12,6 +12,7 @@
   let color = "gray";
   let item;
   let ts;
+  let other = {};
 
   $: {
     if (!item) {
@@ -24,6 +25,7 @@
       message = item.toString();
       color = item.color;
       ts = item.ts;
+      other = item.message
     }
   }
 
@@ -34,6 +36,7 @@
   hash={ts}
   {color}
   {...item}
+  {...other}
   on:finish={() => {
     queue.remove($queue.indexOf(item));
     item = false;

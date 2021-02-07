@@ -9,6 +9,9 @@ function withColor(color, store) {
         ts: new Date(),
         color,
         toString() {
+          if (typeof message === 'object') {
+            return message.message
+          }
           return message;
         }
       }
