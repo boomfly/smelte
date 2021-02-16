@@ -65,7 +65,7 @@
     </Icon>
   {/if}
 
-  <div class="flex flex-col p-0">
+  <div class="flex flex-col flex-1 p-0">
     <div class={$$props.class}>
       <slot>{text}</slot>
     </div>
