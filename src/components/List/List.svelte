@@ -7,6 +7,8 @@
   export let value = "";
   export let dense = false;
   export let select = false;
+  export let add = '';
+  export let remove = '';
 
   export const level = null;
   export const text = "";
@@ -39,6 +41,8 @@
     .flush()
     .add(classes, true, classesDefault)
     .add($$props.class)
+    .add(add)
+    .remove(remove)
     .get();
 </script>
 
