@@ -18,7 +18,8 @@
   export let classes = classesDefault;
   export let navClasses = navClassesDefault;
   export let borderClasses = `border-gray-600 ${right ? "border-l" : "border-r"}`;
-
+  export let navAdd = '';
+  export let navRemove = '';
 
 
 
@@ -56,6 +57,8 @@
 
   $: n = ncb
     .flush()
+    .add(navAdd)
+    .remove(navRemove)
     .get();
 
 </script>
@@ -83,9 +86,7 @@
       role="navigation"
       class={n}
     >
-      <div class="w-full">
-        <slot />
-      </div>
+      <slot />
     </nav>
   </aside>
 {/if}
