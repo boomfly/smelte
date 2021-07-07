@@ -13,9 +13,9 @@
   export let to = "";
   export let selected = "";
   export let color = "primary";
-  export let notSelectedColor = "white";
+  export let notSelectedColor = "gray-700 dark:text-gray";
   export let tabClasses = "flex flex-col items-center content-center mx-auto";
-
+  export let remove = "";
 
 
 
@@ -31,9 +31,9 @@
   $: c = cb
     .flush()
     .add($$props.class)
-    .add("uppercase", icon)
     .add(textColor)
     .add(`hover:bg-${color}-transLight hover:${txt(900)}`)
+    .remove(remove)
     .get();
 </script>
 

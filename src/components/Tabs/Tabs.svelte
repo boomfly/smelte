@@ -12,6 +12,7 @@
   export let indicator = true;
   export let color = "white";
   export let notSelectedColor = "white";
+  export let remove = '';
 
 
   export let loading = false;
@@ -58,6 +59,7 @@
     .add($$props.class)
     .add('hidden md:flex w-full max-w-2xl', navigation)
     .add('flex', !navigation)
+    .remove(remove)
     .get();
 </script>
 
