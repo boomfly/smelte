@@ -175,7 +175,7 @@ input[type="range"]:focus::range-track {
   height: 4px;
 }
 
-th:first-child, td:first-child {
+/* th:first-child, td:first-child {
   @apply text-left border-r border-gray-200;
 }
 
@@ -193,7 +193,7 @@ th:hover .sort {
 
 tr.selected {
   @apply bg-primary-50;
-}
+} */
 
 .select {
   @apply pb-0 mb-0 cursor-pointer;
