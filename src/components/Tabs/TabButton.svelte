@@ -46,7 +46,9 @@
   >
     <div class={tabClasses}>
       {#if icon}
-        <Icon class="mb-1" color={textColor}>{icon}</Icon>
+        <slot name='icon' {textColor} {icon}>
+          <Icon class="mb-1" color={textColor}>{icon}</Icon>
+        </slot>
       {/if}
 
       <div>
@@ -63,7 +65,9 @@
   >
     <div class={tabClasses}>
       {#if icon}
-        <Icon class="mb-1" color={textColor}>{icon}</Icon>
+        <slot name='icon' {textColor} {icon}>
+          <Icon class="mb-1" color={textColor}>{icon}</Icon>
+        </slot>
       {/if}
 
       <div>
