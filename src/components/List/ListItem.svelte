@@ -55,7 +55,9 @@
   {tabindex}
   on:keypress={change}
   on:click={change}
-  on:click>
+  on:click
+  on:contextmenu
+>
   {#if icon}
     <Icon
       class="pr-6"
