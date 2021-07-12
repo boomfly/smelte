@@ -16,6 +16,7 @@
   export const to = null;
   export const selectedClasses = i => i;
   export const itemClasses = i => i;
+  export const disabledClasses = i => i;
 
   const classesDefault = "py-2 rounded";
 
@@ -62,6 +63,7 @@
           bind:value
           {selectedClasses}
           {itemClasses}
+          {disabledClasses}
           {...item}
           tabindex={i + 1}
           id={id(item)}
